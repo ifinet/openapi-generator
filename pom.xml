@@ -65,6 +65,11 @@
         <url>https://github.com/openapitools/openapi-generator/issues</url>
     </issueManagement>
     <distributionManagement>
+        <snapshotRepository>
+            <id>github-ifinet-snapshots</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/ifinet/openapi-generator</url>
+        </snapshotRepository>
         <repository>
             <id>github-ifinet</id>
             <name>GitHub Packages</name>
