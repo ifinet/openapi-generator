@@ -257,6 +257,7 @@ public class TypeScriptAngularClientCodegen extends AbstractTypeScriptClientCode
         } else {
             // Angular v6 requires typescript ">=2.7.2 and <2.10.0"
             additionalProperties.put("tsVersion", ">=2.7.2 and <2.10.0");
+            additionalProperties.put("typesNodeVersion", "14.6.2");
         }
 
         // Set the rxJS version compatible to the Angular version
