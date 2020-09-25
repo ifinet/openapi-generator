@@ -25,6 +25,7 @@ import io.swagger.v3.oas.models.media.ComposedSchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openapitools.codegen.CodegenConstants.ENUM_PROPERTY_NAMING_TYPE;
 import org.openapitools.codegen.CodegenConstants.MODEL_PROPERTY_NAMING_TYPE;
@@ -853,7 +854,8 @@ public abstract class AbstractTypeScriptClientCodegen extends DefaultCodegen imp
                 Process p = Runtime.getRuntime().exec(command);
                 int exitValue = p.waitFor();
                 if (exitValue != 0) {
-                    LOGGER.error("Error running the command ({}). Exit value: {}", command, exitValue);
+                    String stderr = IOUtils.toString(p.getErrorStream());
+                    LOGGER.error("Error running the command ({}). Exit value: {}. StdErr: {}", command, exitValue, stderr);
                 } else {
                     LOGGER.info("Successfully executed: " + command);
                 }
