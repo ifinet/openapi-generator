@@ -1,9 +1,9 @@
 name: Check Supported Java Versions
-on:
-  push:
-    branches:
-      - master
-
+#on:
+#  push:
+#    branches:
+#      - master
+on: [workflow_dispatch]
 jobs:
   build:
     name: Build on JDK ${{ matrix.java }} and ${{ matrix.os }}
