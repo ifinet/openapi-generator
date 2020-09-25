@@ -15,8 +15,8 @@
     <!-- /RELEASE_VERSION -->
     <url>https://github.com/openapitools/openapi-generator</url>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
+        <connection>scm:git:git@ifinet.github.com:ifinet/openapi-generator.git</connection>
+        <developerConnection>scm:git:git@ifinet.github.com:ifinet/openapi-generator.git</developerConnection>
         <url>https://github.com/openapitools/openapi-generator</url>
     </scm>
     <developers>
